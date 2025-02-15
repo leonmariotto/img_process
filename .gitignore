@@ -1,2 +1,6 @@
 one_piece_all
 *.png
+*.jpg
+__pycache__
+
+.venv

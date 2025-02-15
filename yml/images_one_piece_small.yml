@@ -1,0 +1,24 @@
+
+shape:
+    x: 3
+    y: 3
+
+crop:
+    x: 1920
+    y: 3005
+
+thin:
+    x: 1920
+    y: 3005
+
+images_list:
+    - one_piece_all/extracted/cover_T001.jpg
+    - one_piece_all/extracted/cover_T002.jpg
+    - one_piece_all/extracted/cover_T003.jpg
+    - one_piece_all/extracted/cover_T004.jpg
+    - one_piece_all/extracted/cover_T005.jpg
+    - one_piece_all/extracted/cover_T006.jpg
+    - one_piece_all/extracted/cover_T007.jpg
+    - one_piece_all/extracted/cover_T008.jpg
+    - one_piece_all/extracted/cover_T009.jpg
+    - one_piece_all/extracted/cover_T010.jpg
