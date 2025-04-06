@@ -20,8 +20,13 @@ class Key(Enum):
     CROP = "crop"
     THIN = "thin"
     SHAPE = "shape"
+    ORIGIN = "origin"
+    END = "end"
     X = "x"
     Y = "y"
+    BORDER = "border"
+    MODE = "mode"
+    SIZE = "size"
     
 class DataStore():
     """
