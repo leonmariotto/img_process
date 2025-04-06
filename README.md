@@ -13,3 +13,6 @@ It take several parameters in yaml file : crop, thin, border, etc.
 ```
 
 TODO: Adding a garbage collector would greatly reduce the RAM used.
+
+Example of output :
+![image](https://github.com/user-attachments/assets/6a0dc2cb-6d48-4b90-a162-3f08918fe70d)
