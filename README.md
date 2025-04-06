@@ -1,13 +1,15 @@
 # img_process
 
+This implement some tools to manipulate images. <br>
+Work in progress to implement many tools. <br>
+
+## Concatenator
+
+This tool is used to concatenate image into mosaic.
+It take several parameters in yaml file : crop, thin, border, etc.
+
 ```(shell)
-./image_processor.py -y yml/images_one_piece_cover_border.yml
+./concatenator.py -y yml/concatenator_op_cover_100_lq.yml
 ```
 
-TODO:
-pymager ?
-Adding a garbage collector would greatly reduce the RAM used.
-
-Cool work :
-    - T16 p 126-127
-
+TODO: Adding a garbage collector would greatly reduce the RAM used.
