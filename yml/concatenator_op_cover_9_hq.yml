@@ -1,0 +1,31 @@
+
+border: 
+    size: 8
+    mode: erase
+
+shape:
+    x: 3
+    y: 3
+
+crop:
+    origin:
+        x: 0
+        y: 0
+    end:
+        x: 1920
+        y: 3005
+
+thin:
+    x: 1920
+    y: 3005
+
+images_list:
+    - 'images/op_covers/cover_T001.jpg'
+    - 'images/op_covers/cover_T002.jpg'
+    - 'images/op_covers/cover_T003.jpg'
+    - 'images/op_covers/cover_T004.jpg'
+    - 'images/op_covers/cover_T005.jpg'
+    - 'images/op_covers/cover_T006.jpg'
+    - 'images/op_covers/cover_T007.jpg'
+    - 'images/op_covers/cover_T008.jpg'
+    - 'images/op_covers/cover_T009.jpg'
