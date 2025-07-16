@@ -9,7 +9,7 @@ SCRIPTS = \
 all: black bandit pylint flake8
 
 install:
-	pip install numpy
+	uv sync
 
 black:
 	@black ${SCRIPTS} || true

@@ -1,0 +1,13 @@
+[project]
+name = "img_process"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+	"strictyaml",
+	"click",
+	"matplotlib",
+	"numpy",
+]
+
+[dependency-groups]
+tests = ["pytest"]
