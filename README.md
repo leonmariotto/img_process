@@ -3,6 +3,17 @@
 This implement some tools to manipulate images. <br>
 Work in progress to implement many tools. <br>
 
+TODO : 
+- use pydantic to get environment variables
+- use mkdocs and build http page accessible via github
+- write some test with pytest and run it through github action
+- use uv for dependency management
+- use ruff as code formatter
+- use ty for type checking
+- use a pre-commit to run code formatter and type checking automatically
+- use python @dataclass
+- use fastAPI for modules API
+
 ## Concatenator
 
 This tool is used to concatenate image into mosaic. <br>
