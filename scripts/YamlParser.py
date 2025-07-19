@@ -3,9 +3,8 @@ Module YamlParser
 """
 
 import logging
-from typing import List, Dict
+from typing import Dict
 import strictyaml
-from .DataStore import DataStore, Key
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -24,12 +23,12 @@ class YamlParser:
     Class YamlParser
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self):
         """
         Init YamlParser
         """
         self.logger = logging.getLogger(__name__)
-        self.data_store = data_store
+        self.data_store: Dict = {}
 
     def parse(self, path: str):
         self.logger.debug("Parse YAML file [%s]", path)
@@ -47,24 +46,4 @@ class YamlParser:
         except strictyaml.YAMLError as err:
             self.logger.error("Error parsing the yaml [%s]", path)
             raise YamlParserError from err
-        YamlParser.__add_keys(yaml_data, self.data_store, [])
-
-    @staticmethod
-    def __add_keys(
-        data,
-        data_store: DataStore,
-        key: List[Key],
-    ):
-        """
-        Recursively add key value pair into the dict
-        """
-        for curr_key, value in data.items():
-            # Push current key
-            key.append(Key(curr_key))
-            if isinstance(value, Dict):
-                YamlParser.__add_keys(value, data_store, key)
-            else:
-                # Add the edge value
-                data_store.add_entry(key, value)
-            # Pop current key
-            key.pop()
+        self.data_store.update(yaml_data)

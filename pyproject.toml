@@ -13,4 +13,5 @@ dependencies = [
 	"ruff",
 	"ty",
 	"pytest",
+	"pydantic",
 ]
