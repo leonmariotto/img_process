@@ -233,14 +233,10 @@ dependencies = [
     { name = "mkdocs-material" },
     { name = "numpy" },
     { name = "pre-commit" },
+    { name = "pytest" },
     { name = "ruff" },
     { name = "strictyaml" },
     { name = "ty" },
-]
-
-[package.dev-dependencies]
-tests = [
-    { name = "pytest" },
 ]
 
 [package.metadata]
@@ -251,13 +247,11 @@ requires-dist = [
     { name = "mkdocs-material" },
     { name = "numpy" },
     { name = "pre-commit" },
+    { name = "pytest" },
     { name = "ruff" },
     { name = "strictyaml" },
     { name = "ty" },
 ]
-
-[package.metadata.requires-dev]
-tests = [{ name = "pytest" }]
 
 [[package]]
 name = "iniconfig"

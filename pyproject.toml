@@ -12,7 +12,5 @@ dependencies = [
 	"pre-commit",
 	"ruff",
 	"ty",
+	"pytest",
 ]
-
-[dependency-groups]
-tests = ["pytest"]
