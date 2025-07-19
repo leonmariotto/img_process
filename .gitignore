@@ -2,3 +2,5 @@ one_piece_all
 __pycache__
 
 .venv
+image_processor_output.png
+site/*
