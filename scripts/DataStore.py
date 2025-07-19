@@ -3,7 +3,7 @@ Module DataStore
 """
 
 import logging
-from typing import Dict, List
+from typing import List
 from enum import Enum
 
 logging.basicConfig(
@@ -11,10 +11,12 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
 )
 
+
 class Key(Enum):
     """
     Class Key
     """
+
     WORKSPACE_DIR = "workspace_dir"
     IMAGES_LIST = "images_list"
     CROP = "crop"
@@ -27,8 +29,9 @@ class Key(Enum):
     BORDER = "border"
     MODE = "mode"
     SIZE = "size"
-    
-class DataStore():
+
+
+class DataStore:
     """
     Class DataStore
     This class is a wrapper around a dictonary, providing
@@ -38,7 +41,8 @@ class DataStore():
         - set_entry: set an existing entry, if its not exist raise an exception
     Value of DataStore can be anything except a Dictionnary.
     """
-    __TOKEN = ';'
+
+    __TOKEN = ";"
 
     def __init__(self):
         """
@@ -57,7 +61,7 @@ class DataStore():
             return True
         return False
 
-    def add_entry(self, keywords:List[Key], value):
+    def add_entry(self, keywords: List[Key], value):
         """
         Check if an entry exist, if not add it, otherwise raise
         an exception
@@ -66,8 +70,8 @@ class DataStore():
         if key in self.data:
             raise KeyError("Error key is already in DataStore")
         self.data[key] = value
-    
-    def get_entry(self, keywords:List[Key]):
+
+    def get_entry(self, keywords: List[Key]):
         """
         Check if an entry exist, if not raise an exception
         otherwise return the value
@@ -76,8 +80,8 @@ class DataStore():
         if key not in self.data:
             raise KeyError("Error key is already in DataStore")
         return self.data[key]
-    
-    def set_entry(self, keywords:List[Key], value):
+
+    def set_entry(self, keywords: List[Key], value):
         """
         Check if an entry exist, if not raise an exception
         otherwise set the entry to the value
@@ -86,7 +90,7 @@ class DataStore():
         if key not in self.data:
             raise KeyError("Error key is already in DataStore")
         self.data[key] = value
-         
+
     @staticmethod
     def __key(keywords: List[Key]) -> str:
         """
@@ -97,5 +101,3 @@ class DataStore():
         if not keywords:
             raise KeyError("Empty key")
         return DataStore.__TOKEN.join([str(key) for key in keywords])
-
- 

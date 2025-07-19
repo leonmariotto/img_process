@@ -12,23 +12,26 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
 )
 
+
 class YamlParserError(Exception):
     """
     Custom class for yaml parsing error
     """
 
-class YamlParser():
+
+class YamlParser:
     """
     Class YamlParser
     """
-    def __init__(self, data_store:DataStore):
+
+    def __init__(self, data_store: DataStore):
         """
         Init YamlParser
         """
         self.logger = logging.getLogger(__name__)
         self.data_store = data_store
-  
-    def parse(self, path:str):
+
+    def parse(self, path: str):
         self.logger.debug("Parse YAML file [%s]", path)
 
         # Read file content into string
@@ -49,7 +52,7 @@ class YamlParser():
     @staticmethod
     def __add_keys(
         data,
-        data_store:DataStore,
+        data_store: DataStore,
         key: List[Key],
     ):
         """

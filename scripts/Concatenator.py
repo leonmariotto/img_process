@@ -59,6 +59,7 @@ class Concatenator:
         img.save(path, format="PNG")
         self.logger.debug("Save numpy array image to path [%s]", path)
 
+
 def get_environment_vars(data_store: DataStore):
     """
     Get some environment variables :
@@ -106,8 +107,8 @@ def concatenator(yamls: List[str], output: str):
     crop_origin_x = int(data_store.get_entry([Key.CROP, Key.ORIGIN, Key.X]))
     crop_origin_y = int(data_store.get_entry([Key.CROP, Key.ORIGIN, Key.Y]))
     croped_images_content_list = [
-        scrap_booker.crop(img, (crop_x, crop_y),
-        (crop_origin_x, crop_origin_y)) for img in images_content_list
+        scrap_booker.crop(img, (crop_x, crop_y), (crop_origin_x, crop_origin_y))
+        for img in images_content_list
     ]
     images_content_list = croped_images_content_list
     thin_x = int(data_store.get_entry([Key.THIN, Key.X]))
@@ -119,7 +120,8 @@ def concatenator(yamls: List[str], output: str):
     border_size = int(data_store.get_entry([Key.BORDER, Key.SIZE]))
     border_mode = str(data_store.get_entry([Key.BORDER, Key.MODE]))
     borded_images_content_list = [
-        scrap_booker.border(img, border_size, border_mode) for img in images_content_list
+        scrap_booker.border(img, border_size, border_mode)
+        for img in images_content_list
     ]
     images_content_list = borded_images_content_list
     shape_x = int(data_store.get_entry([Key.SHAPE, Key.X]))
