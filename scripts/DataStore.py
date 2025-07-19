@@ -100,4 +100,4 @@ class DataStore:
         """
         if not keywords:
             raise KeyError("Empty key")
-        return DataStore.__TOKEN.join([str(key) for key in keywords])
+        return DataStore.__TOKEN.join([str(key.value) for key in keywords])
