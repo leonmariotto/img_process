@@ -9,6 +9,9 @@ dependencies = [
 	"numpy",
 	"mkdocs",
 	"mkdocs-material",
+	"pre-commit",
+	"ruff",
+	"ty",
 ]
 
 [dependency-groups]
