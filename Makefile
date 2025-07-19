@@ -24,4 +24,4 @@ flake8:
 	@flake8 ${SCRIPTS} || true
 
 clean:
-	@rm -rf dist/ build/ __pycache__/ *.spec
+	@rm -rf dist/ build/ __pycache__/ *.spec site/ image_processor_output.png
